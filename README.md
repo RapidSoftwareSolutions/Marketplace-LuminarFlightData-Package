@@ -1,4 +1,4 @@
-#FlightData Package
+#LuminarFlightData Package
 The tool below enables you to explore the Flight Data APIs by building queries and viewing live data
 * Domain: laminardata.aero
 * Credentials: userKey
