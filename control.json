@@ -1,0 +1,37 @@
+{
+    "getFlightsByAirline": {
+        "url": "/airlines/:airlinePrefix/flights",
+        "method": "GET",
+        "args": {
+            "credentials|userKey": "$user_key",
+            "String|airlinePrefix": "$!airlinePrefix",
+            "String|status": "status"
+        }
+    },
+    "getFlightDetailByGUFI": {
+        "url": "/flights/:gufi",
+        "method": "GET",
+        "args": {
+            "credentials|userKey": "$user_key",
+            "String|gufi": "$!gufi"
+        }
+    },
+    "getFlightsByTile": {
+        "url": "/tiles/3/:x/:y/flights",
+        "method": "GET",
+        "args": {
+            "credentials|userKey": "$user_key",
+            "Number|x": "$!x",
+            "Number|y": "$!y"
+        }
+    },
+    "glightsByAerodromePair": {
+        "url": "/aerodromes/:originIcao/destinations/:destinationIcao/flights",
+        "method": "GET",
+        "args": {
+            "String|userKey": "$user_key",
+            "credentials|originIcao": "$!originIcao",
+            "String|destinationIcao": "$!destinationIcao"
+        }
+    }
+}

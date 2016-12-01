@@ -1,0 +1,4 @@
+node_modules
+test/rapid.*
+test/*.json
+generate.js
