@@ -34,7 +34,7 @@ Retrieves a list of flight summaries for a given tile using an extended version 
 | xCoordinate | Number     | Required: The x coordinate in the Mercator projection e.g. 3 (Accepts values 0 - 7)
 | yCoordinate | Number     | Required: The y coordinate in the Mercator projection e.g. 2 (Accepts values 0 - 7)
 
-## LuminarFlightData.glightsByAerodromePair
+## LuminarFlightData.flightsByAerodromePair
 Retrieves a list of flight summaries between a pair of aerodromes using an extended version of FIXM 3.0, including scheduled and airborne flights.
 
 | Field          | Type       | Description
