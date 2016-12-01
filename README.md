@@ -1,4 +1,4 @@
-#git auminarFlightData Package
+#FlightData Package
 The tool below enables you to explore the Flight Data APIs by building queries and viewing live data
 * Domain: laminardata.aero
 * Credentials: userKey
@@ -39,7 +39,7 @@ Retrieves a list of flight summaries between a pair of aerodromes using an exten
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| userKey        | String     | Required: User Key Authentication Parameter
-| originIcao     | credentials| Required: The ICAO code for an aerodrome of origin e.g. EGLL (Case sensitive)
+| userKey        | credentials| Required: User Key Authentication Parameter
+| originIcao     | String     | Required: The ICAO code for an aerodrome of origin e.g. EGLL (Case sensitive)
 | destinationIcao| String     | Required: The ICAO code for an aerodrome destination e.g. KJFK (Case sensitive)
 
