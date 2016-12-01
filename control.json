@@ -21,16 +21,16 @@
         "method": "GET",
         "args": {
             "credentials|userKey": "$user_key",
-            "Number|x": "$!x",
-            "Number|y": "$!y"
+            "Number|xCoordinate": "$!x",
+            "Number|yCoordinate": "$!y"
         }
     },
     "glightsByAerodromePair": {
         "url": "/aerodromes/:originIcao/destinations/:destinationIcao/flights",
         "method": "GET",
         "args": {
-            "String|userKey": "$user_key",
-            "credentials|originIcao": "$!originIcao",
+            "credentials|userKey": "$user_key",
+            "String|originIcao": "$!originIcao",
             "String|destinationIcao": "$!destinationIcao"
         }
     }

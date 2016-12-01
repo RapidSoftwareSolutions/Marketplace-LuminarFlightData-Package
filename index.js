@@ -37,7 +37,7 @@ for(let func in control) {
         parseUri: true,
         hasSkip:  true,
         query:    {},
-        debug:    true
+        //debug:    true
     };
 
     let {

@@ -1,4 +1,4 @@
-# LuminarFlightData Package
+#git auminarFlightData Package
 The tool below enables you to explore the Flight Data APIs by building queries and viewing live data
 * Domain: laminardata.aero
 * Credentials: userKey
@@ -28,11 +28,11 @@ Retrieves the most complete picture of a single flight using an extended version
 ## LuminarFlightData.getFlightsByTile
 Retrieves a list of flight summaries for a given tile using an extended version of FIXM 3.0. For more information on tiling see below. The API only returns airborne flights.
 
-| Field  | Type       | Description
-|--------|------------|----------
-| userKey| credentials| Required: User Key Authentication Parameter
-| x      | Number     | Required: The x coordinate in the Mercator projection e.g. 3 (Accepts values 0 - 7)
-| y      | Number     | Required: The y coordinate in the Mercator projection e.g. 2 (Accepts values 0 - 7)
+| Field       | Type       | Description
+|-------------|------------|----------
+| userKey     | credentials| Required: User Key Authentication Parameter
+| xCoordinate | Number     | Required: The x coordinate in the Mercator projection e.g. 3 (Accepts values 0 - 7)
+| yCoordinate | Number     | Required: The y coordinate in the Mercator projection e.g. 2 (Accepts values 0 - 7)
 
 ## LuminarFlightData.glightsByAerodromePair
 Retrieves a list of flight summaries between a pair of aerodromes using an extended version of FIXM 3.0, including scheduled and airborne flights.
