@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.all(`/api/${PACKAGE_NAME}`, (req, res) => { res.send(metadata); });
 
 let parseResponse = (res) => new Promise((resolve, reject) => {
-    xmlParser(res, {ignoreAttrs: true}, (err, result) => {
+    xmlParser(res, /*{ignoreAttrs: true},*/ (err, result) => {
         if(err) reject();
         resolve(result);
     })
@@ -76,6 +76,7 @@ for(let func in control) {
             r.callback            = 'success';
             r.contextWrites['to'] = func == 'getFlightsByTile' ? response : yield parseResponse(response);
         } catch(e) {
+            console.log(e)
             r.callback            = 'error';
             r.contextWrites['to'] = e.status_code ? e : { status_code: "API_ERROR", status_msg: '404 Not Found. Please, check api params and try again.' };
         }
