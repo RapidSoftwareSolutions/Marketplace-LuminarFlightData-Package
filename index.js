@@ -76,7 +76,6 @@ for(let func in control) {
             r.callback            = 'success';
             r.contextWrites['to'] = func == 'getFlightsByTile' ? response : yield parseResponse(response);
         } catch(e) {
-            console.log(e)
             r.callback            = 'error';
             r.contextWrites['to'] = e.status_code ? e : { status_code: "API_ERROR", status_msg: '404 Not Found. Please, check api params and try again.' };
         }

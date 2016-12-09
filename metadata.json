@@ -1,6 +1,7 @@
 {
   "package": "LuminarFlightData",
   "tagline": "LuminarFlight Data API Package",
+  "keywords": ["API", "Delta", "JetBlue", "Southwest", "United", "air", "airline", "airlines", "flight", "flights", "fly", "flying", "plan", "plane", "travel", "trip"],
   "description": "The tool below enables you to explore the Flight Data APIs by building queries and viewing live data",
   "image": "https://laminardata.aero/wp-content/uploads/2016/07/LAMINAR-DATA-LOGOS-FINAL-Retina-1.jpg",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-LuminarFlightData-Package",
@@ -18,16 +19,19 @@
         {
           "name": "userKey",
           "type": "credentials",
-          "info": "Required: User Key Authentication Parameter"
+          "info": "User Key Authentication Parameter",
+          "required": true
         },
         {
           "name": "airlinePrefix",
           "type": "String",
-          "info": "Required: The ICAO prefix for an airline e.g. BAW (Case sensitive)"
+          "required": true,
+          "info": "The ICAO prefix for an airline e.g. BAW (Case sensitive)"
         },
         {
           "name": "status",
           "type": "String",
+          "required": false,
           "info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
         }
       ],
@@ -49,12 +53,14 @@
         {
           "name": "userKey",
           "type": "credentials",
-          "info": "Required: User Key Authentication Parameter"
+          "required": true,
+          "info": "User Key Authentication Parameter"
         },
         {
           "name": "gufi",
           "type": "String",
-          "info": "Required: GUFI of the flight to look up e.g. `761b728a-9a50-4222-8325-8be4a1574241`"
+          "required": true,
+          "info": "GUFI of the flight to look up e.g. `761b728a-9a50-4222-8325-8be4a1574241`"
         }
       ],
       "callbacks": [
@@ -75,17 +81,20 @@
         {
           "name": "userKey",
           "type": "credentials",
-          "info": "Required: User Key Authentication Parameter"
+          "required": true,
+          "info": "User Key Authentication Parameter"
         },        
         {
           "name": "xCoordinate",
           "type": "Number",
-          "info": "Required: The x coordinate in the Mercator projection e.g. 3 (Accepts values 0 - 7)"
+          "required": true,
+          "info": "The x coordinate in the Mercator projection e.g. 3 (Accepts values 0 - 7)"
         },
         {
           "name": "yCoordinate",
           "type": "Number",
-          "info": "Required: The y coordinate in the Mercator projection e.g. 2 (Accepts values 0 - 7)"
+          "required": true,
+          "info": "The y coordinate in the Mercator projection e.g. 2 (Accepts values 0 - 7)"
         }
       ],
       "callbacks": [
@@ -106,17 +115,20 @@
         {
           "name": "userKey",
           "type": "credentials",
-          "info": "Required: User Key Authentication Parameter"
+          "required": true,
+          "info": "User Key Authentication Parameter"
         },
         {
           "name": "originIcao",
           "type": "String",
-          "info": "Required: The ICAO code for an aerodrome of origin e.g. EGLL (Case sensitive)"
+          "required": true,
+          "info": "The ICAO code for an aerodrome of origin e.g. EGLL (Case sensitive)"
         },
         {
           "name": "destinationIcao",
           "type": "String",
-          "info": "Required: The ICAO code for an aerodrome destination e.g. KJFK (Case sensitive)"
+          "required": true,
+          "info": "The ICAO code for an aerodrome destination e.g. KJFK (Case sensitive)"
         }
       ],
       "callbacks": [
