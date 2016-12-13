@@ -1,6 +1,6 @@
 "use strict";
 
-global.PACKAGE_NAME = 'LuminarFlightData';
+global.PACKAGE_NAME = 'LaminarFlightData';
 global.API_ENDPOINT = 'https://api.laminardata.aero/v1';
 
 const express       = require('express'),

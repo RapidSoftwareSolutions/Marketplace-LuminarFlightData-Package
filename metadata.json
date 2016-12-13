@@ -1,6 +1,6 @@
 {
-  "package": "LuminarFlightData",
-  "tagline": "LuminarFlight Data API Package",
+  "package": "LaminarFlightData",
+  "tagline": "LaminarFlight Data API Package",
   "keywords": ["API", "Delta", "JetBlue", "Southwest", "United", "air", "airline", "airlines", "flight", "flights", "fly", "flying", "plan", "plane", "travel", "trip"],
   "description": "The tool below enables you to explore the Flight Data APIs by building queries and viewing live data",
   "image": "https://laminardata.aero/wp-content/uploads/2016/07/LAMINAR-DATA-LOGOS-FINAL-Retina-1.jpg",
