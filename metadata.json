@@ -30,7 +30,8 @@
         },
         {
           "name": "status",
-          "type": "String",
+          "type": "Select",
+          "options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
           "required": false,
           "info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
         }
