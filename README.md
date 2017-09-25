@@ -7,9 +7,9 @@ The tool below enables you to explore the Flight Data APIs by building queries a
 * Credentials: userKey
 
 ## How to get credentials: 
-0. Login to your [LaminarData account](developer.laminardata.aero) 
+0. Login to your [LaminarData account](https://developer.laminardata.aero/login) 
 1. Got to [Admin Page](https://developer.laminardata.aero/admin)
-2. Copy and save your `userKey`
+2. Copy the `Key` which will be used as your `userKey` on RapidAPI
 
 ## LaminarFlightData.getFlightsByAirline
 Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.
