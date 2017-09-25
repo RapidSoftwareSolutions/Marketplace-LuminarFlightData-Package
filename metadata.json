@@ -11,6 +11,11 @@
       "userKey"
     ]
   },
+  "steps": [
+    "Login to your LaminarData account (https://developer.laminardata.aero/login)",
+    "Got to Admin Page (https://developer.laminardata.aero/admin)",
+    "Copy the 'Key' which will be used as your 'userKey' on RapidAPI"
+  ],
   "blocks": [
     {
       "name": "getFlightsByAirline",
