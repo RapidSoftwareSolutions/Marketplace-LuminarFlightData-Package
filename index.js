@@ -19,11 +19,12 @@ app.use(bodyParser.json(({limit: '50mb'})));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.all(`/api/${PACKAGE_NAME}`, (req, res) => { res.send(metadata); });
 
-let parseResponse = (res) => new Promise((resolve, reject) => {
-    xmlParser(res, /*{ignoreAttrs: true},*/ (err, result) => {
-        if(err) reject();
-        resolve(result);
-    })
+let parseResponse = (res) => new Promise((resolve, reject) => {	
+		xmlParser(res, /*{ignoreAttrs: true},*/ (err, result) => {
+			if(err) reject();
+			resolve(result);
+	})
+	
 })
 
 let mfile = fs.readFileSync('./metadata.json', 'utf-8'),
@@ -62,21 +63,21 @@ for(let func in control) {
                 headers: {
                     'Accept': 'application/json'
                 }
-            });
+						});
 
             for(let arg in args) {
                 let argarr      = arg.split('|');
                 opts[args[arg] + '|' + argarr[0]] = req.body.args[argarr[1]];
-            }
+						}
 
             method == 'GET' ? options.query = opts : options.body = opts;
-            options.method = method;
+						options.method = method;
 
-            response              = yield api.request(options);
-            r.callback            = 'success';
-            r.contextWrites['to'] = func == 'getFlightsByTile' ? response : yield parseResponse(response);
+						response              = yield api.request(options);
+						r.callback            = 'success';
+						r.contextWrites['to'] = (func == 'getFlightsByAerodrome' || func == 'getFlightsByAirline' || func == 'getFlightsByTile' || func == 'getFlightDataFirLoad' || func == 'getFlightDetailByGUFI' || func == 'getDeparturesByAerodrome' || func == 'getFlightDelayByGUFI')? response : yield parseResponse(response);
         } catch(e) {
-            r.callback            = 'error';
+						r.callback            = 'error';
             r.contextWrites['to'] = e.status_code ? e : { status_code: "API_ERROR", status_msg: '404 Not Found. Please, check api params and try again.' };
         }
 

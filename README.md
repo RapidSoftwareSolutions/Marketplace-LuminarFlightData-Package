@@ -20,7 +20,43 @@ Retrieves a list of flight summaries for a given airline using an extended versi
 | airlinePrefix| String     | Required: The ICAO prefix for an airline e.g. BAW (Case sensitive)
 | status       | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
 
+## LaminarFlightData.getFlightsByAerodrome
+Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.
+
+| Field        | Type       | Description
+|--------------|------------|----------
+| userKey      | credentials| Required: User Key Authentication Parameter
+| aerodromeICAO| String     | Required: The ICAO code for an aerodrome to see arrivals for e.g. EGLL (Case sensitive)
+| status       | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
+
+## LaminarFlightData.getDeparturesByAerodrome
+Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.
+
+| Field        | Type       | Description
+|--------------|------------|----------
+| userKey      | credentials| Required: User Key Authentication Parameter
+| aerodromeICAO| String     | Required: The ICAO code for an aerodrome to see arrivals for e.g. EGLL (Case sensitive)
+| status       | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
+
+## LaminarFlightData.getFlightDataFirLoad
+Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.
+
+| Field        | Type       | Description
+|--------------|------------|----------
+| userKey      | credentials| Required: User Key Authentication Parameter
+| icaoPrefix   | String     | Required: First letter of the ICAO designator e.g. E (Case sensitive)
+| firIcao   	 | String     | Required: ICAO code of the FIR e.g. EGTT (Case sensitive)
+| status       | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
+
 ## LaminarFlightData.getFlightDetailByGUFI
+Retrieves the most complete picture of a single flight using an extended version of FIXM 3.0. Completed flights will remain accessible in the API for 3 hours after the flight has landed. Note that the example GUFI below will not work; you will need a current one from one of the other API calls (e.g. Flights by Airline).
+
+| Field  | Type       | Description
+|--------|------------|----------
+| userKey| credentials| Required: User Key Authentication Parameter
+| gufi   | String     | Required: GUFI of the flight to look up e.g. `761b728a-9a50-4222-8325-8be4a1574241`
+
+## LaminarFlightData.getFlightDelayByGUFI
 Retrieves the most complete picture of a single flight using an extended version of FIXM 3.0. Completed flights will remain accessible in the API for 3 hours after the flight has landed. Note that the example GUFI below will not work; you will need a current one from one of the other API calls (e.g. Flights by Airline).
 
 | Field  | Type       | Description

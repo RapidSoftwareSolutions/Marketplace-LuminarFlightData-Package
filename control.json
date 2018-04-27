@@ -7,7 +7,35 @@
             "String|airlinePrefix": "$!airlinePrefix",
             "String|status": "status"
         }
-    },
+		},
+		"getFlightsByAerodrome": {
+				"url": "/aerodromes/:aerodromeICAO/arrivals",
+				"method": "GET",
+				"args": {
+						"credentials|userKey": "$user_key",
+						"String|aerodromeICAO": "$!aerodromeICAO",
+						"String|status": "status"
+				}
+		},
+		"getDeparturesByAerodrome": {
+				"url": "/aerodromes/:aerodromeICAO/departures",
+				"method": "GET",
+				"args": {
+						"credentials|userKey": "$user_key",
+						"String|aerodromeICAO": "$!aerodromeICAO",
+						"String|status": "status"
+				}
+		},
+		"getFlightDataFirLoad": {
+				"url": "/icao-prefixes/:icaoPrefix/firs/:firIcao/flights",
+				"method": "GET",
+				"args": {
+						"credentials|userKey": "$user_key",
+						"String|icaoPrefix": "$!icaoPrefix",
+						"String|firIcao": "$!firIcao",
+						"String|status": "status"
+				}
+		},
     "getFlightDetailByGUFI": {
         "url": "/flights/:gufi",
         "method": "GET",
@@ -15,7 +43,15 @@
             "credentials|userKey": "$user_key",
             "String|gufi": "$!gufi"
         }
-    },
+		},
+		"getFlightDelayByGUFI": {
+				"url": "/flights/:gufi/delay",
+				"method": "GET",
+				"args": {
+						"credentials|userKey": "$user_key",
+						"String|gufi": "$!gufi"
+				}
+		},
     "getFlightsByTile": {
         "url": "/tiles/3/:x/:y/flights",
         "method": "GET",
