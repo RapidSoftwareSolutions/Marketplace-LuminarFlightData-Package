@@ -57,7 +57,7 @@ Retrieves the most complete picture of a single flight using an extended version
 | gufi   | String     | Required: GUFI of the flight to look up e.g. `761b728a-9a50-4222-8325-8be4a1574241`
 
 ## LaminarFlightData.getFlightDelayByGUFI
-Retrieves the most complete picture of a single flight using an extended version of FIXM 3.0. Completed flights will remain accessible in the API for 3 hours after the flight has landed. Note that the example GUFI below will not work; you will need a current one from one of the other API calls (e.g. Flights by Airline).
+Retrieves the delay for a single flight. Available in both JSON and XML. Completed flights will remain accessible in the API for 6 hours after the flight has landed. Note that the example GUFI below will not work; you will need a current one from one of the other API calls (e.g. Flights by Airline). 
 
 | Field  | Type       | Description
 |--------|------------|----------
