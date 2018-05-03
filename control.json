@@ -1,6 +1,6 @@
 {
 	"getFlightsByAirline": {
-	 "url": "/airlines/:airlinePrefix/flights",
+	 "url": "/airlines/:airlinePrefix/flights?:status",
 	 "method": "GET",
 	 "args": {
 		"credentials|userKey": "$user_key",
@@ -9,7 +9,7 @@
 	 }
 	},
 	"getFlightsByAerodrome": {
-	 "url": "/aerodromes/:aerodromeICAO/arrivals",
+	 "url": "/aerodromes/:aerodromeICAO/arrivals?:status",
 	 "method": "GET",
 	 "args": {
 		"credentials|userKey": "$user_key",
@@ -18,7 +18,7 @@
 	 }
 	},
 	"getDeparturesByAerodrome": {
-	 "url": "/aerodromes/:aerodromeICAO/departures",
+	 "url": "/aerodromes/:aerodromeICAO/departures?:status",
 	 "method": "GET",
 	 "args": {
 		"credentials|userKey": "$user_key",
@@ -27,7 +27,7 @@
 	 }
 	},
 	"getFlightDataFirLoad": {
-	 "url": "/icao-prefixes/:icaoPrefix/firs/:firIcao/flights",
+	 "url": "/icao-prefixes/:icaoPrefix/firs/:firIcao/flights?:status",
 	 "method": "GET",
 	 "args": {
 		"credentials|userKey": "$user_key",
@@ -62,12 +62,13 @@
 	 }
 	},
 	"flightsByAerodromePair": {
-	 "url": "/aerodromes/:originIcao/destinations/:destinationIcao/flights",
+	 "url": "/aerodromes/:originIcao/destinations/:destinationIcao/flights?:status",
 	 "method": "GET",
 	 "args": {
 		"credentials|userKey": "$user_key",
 		"String|originIcao": "$!originIcao",
-		"String|destinationIcao": "$!destinationIcao"
+		"String|destinationIcao": "$!destinationIcao",
+		"String|status": "status"
 	 }
 	}
  }
