@@ -3,7 +3,7 @@
 
 #LaminarFlightData Package
 The tool below enables you to explore the Flight Data APIs by building queries and viewing live data
-* Domain: laminardata.aero
+* Domain: [laminardata.aero](https://snowflakesoftware.com/)
 * Credentials: userKey
 
 ## How to get credentials: 
@@ -21,7 +21,7 @@ Retrieves a list of flight summaries for a given airline using an extended versi
 | status       | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
 
 ## LaminarFlightData.getFlightsByAerodrome
-Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.
+Retrieves summary information for flights arriving or that are scheduled to arrive at the given aerodrome using an extended version of FIXM 3.0, including scheduled and airborne flights. 
 
 | Field        | Type       | Description
 |--------------|------------|----------
@@ -30,7 +30,7 @@ Retrieves a list of flight summaries for a given airline using an extended versi
 | status       | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
 
 ## LaminarFlightData.getDeparturesByAerodrome
-Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.
+Retrieves summary information for flights departing or that are scheduled to depart from the given aerodrome using an extended version of FIXM 3.0, including scheduled and airborne flights.
 
 | Field        | Type       | Description
 |--------------|------------|----------
@@ -39,14 +39,14 @@ Retrieves a list of flight summaries for a given airline using an extended versi
 | status       | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
 
 ## LaminarFlightData.getFlightDataFirLoad
-Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.
+Retrieves flights within a given FIR. This GeoJSON API, available via RESTful or streaming interfaces, contains the following European flight data: Estimated FIR entry time (flights scheduled to enter the chosen FIR) Actual FIR entry timestamp (airborne flights currently in the FIR / flights that have already passed through the FIR)and Positional reports (for airborne flights)
 
 | Field        | Type       | Description
 |--------------|------------|----------
 | userKey      | credentials| Required: User Key Authentication Parameter
 | icaoPrefix   | String     | Required: First letter of the ICAO designator e.g. E (Case sensitive)
 | firIcao   	 | String     | Required: ICAO code of the FIR e.g. EGTT (Case sensitive)
-| status       | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
+| status       | Select     | Flight Status (airborne, cancelled, completed, planned or scheduled)
 
 ## LaminarFlightData.getFlightDetailByGUFI
 Retrieves the most complete picture of a single flight using an extended version of FIXM 3.0. Completed flights will remain accessible in the API for 3 hours after the flight has landed.

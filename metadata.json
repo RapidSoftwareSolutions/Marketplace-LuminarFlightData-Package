@@ -6,222 +6,228 @@
 	"image": "https://laminardata.aero/wp-content/uploads/2016/07/LAMINAR-DATA-LOGOS-FINAL-Retina-1.jpg",
 	"repo": "https://github.com/RapidSoftwareSolutions/Marketplace-LuminarFlightData-Package",
 	"accounts": {
-	 "domain": "laminardata.aero",
-	 "credentials": [
-		"userKey"
-	 ]
+		"domain": "laminardata.aero",
+		"credentials": [
+			"userKey"
+		]
 	},
 	"steps": [
-	 "Login to your LaminarData account (https://developer.laminardata.aero/login)",
-	 "Got to Admin Page (https://developer.laminardata.aero/admin)",
-	 "Copy the 'Key' which will be used as your 'userKey' on RapidAPI"
+		"Login to your LaminarData account (https://developer.laminardata.aero/login)",
+		"Got to Admin Page (https://developer.laminardata.aero/admin)",
+		"Copy the 'Key' which will be used as your 'userKey' on RapidAPI"
 	],
 	"blocks": [{
-	 "name": "getFlightsByAirline",
-	 "description": "Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.",
-	 "args": [{
-		"name": "userKey",
-		"type": "credentials",
-		"info": "User Key Authentication Parameter",
-		"required": true
-	 }, {
-		"name": "airlinePrefix",
-		"type": "String",
-		"required": true,
-		"info": "The ICAO prefix for an airline e.g. BAW (Case sensitive)"
-	 }, {
-		"name": "status",
-		"type": "Select",
-		"options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
-		"required": false,
-		"info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
-	 }],
-	 "callbacks": [{
-		"name": "error",
-		"info": "Error"
-	 }, {
-		"name": "success",
-		"info": "Success"
-	 }]
+		"name": "getFlightsByAirline",
+		"description": "Retrieves a list of flight summaries for a given airline using an extended version of FIXM 3.0, including scheduled and airborne flights.",
+		"args": [{
+			"name": "userKey",
+			"type": "credentials",
+			"info": "User Key Authentication Parameter",
+			"required": true
+		}, {
+			"name": "airlinePrefix",
+			"type": "String",
+			"required": true,
+			"info": "The ICAO prefix for an airline e.g. BAW (Case sensitive)"
+		}, {
+			"name": "status",
+			"type": "Select",
+			"options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
+			"required": false,
+			"info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
+		}],
+		"callbacks": [{
+			"name": "error",
+			"info": "Error"
+		}, {
+			"name": "success",
+			"info": "Success"
+		}]
 	}, {
-	 "name": "getFlightsByAerodrome",
-	 "description": "Retrieves summary information for flights arriving or that are scheduled to arrive at the given aerodrome using an extended version of FIXM 3.0, including scheduled and airborne flights.",
-	 "args": [{
-		"name": "userKey",
-		"type": "credentials",
-		"info": "User Key Authentication Parameter",
-		"required": true
-	 }, {
-		"name": "aerodromeICAO",
-		"type": "String",
-		"required": true,
-		"info": "The ICAO code for an aerodrome to see arrivals for e.g. EGLL (Case sensitive)"
-	 }, {
-		"name": "status",
-		"type": "Select",
-		"options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
-		"required": false,
-		"info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
-	 }],
-	 "callbacks": [{
-		"name": "error",
-		"info": "Error"
-	 }, {
-		"name": "success",
-		"info": "Success"
-	 }]
+		"name": "getFlightsByAerodrome",
+		"description": "Retrieves summary information for flights arriving or that are scheduled to arrive at the given aerodrome using an extended version of FIXM 3.0, including scheduled and airborne flights.",
+		"args": [{
+			"name": "userKey",
+			"type": "credentials",
+			"info": "User Key Authentication Parameter",
+			"required": true
+		}, {
+			"name": "aerodromeICAO",
+			"type": "String",
+			"required": true,
+			"info": "The ICAO code for an aerodrome to see arrivals for e.g. EGLL (Case sensitive)"
+		}, {
+			"name": "status",
+			"type": "Select",
+			"options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
+			"required": false,
+			"info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
+		}],
+		"callbacks": [{
+			"name": "error",
+			"info": "Error"
+		}, {
+			"name": "success",
+			"info": "Success"
+		}]
 	}, {
-	 "name": "getDeparturesByAerodrome",
-	 "description": "Retrieves summary information for flights departing or that are scheduled to depart from the given aerodrome using an extended version of FIXM 3.0, including scheduled and airborne flights. Summary information includes:",
-	 "args": [{
-		"name": "userKey",
-		"type": "credentials",
-		"info": "User Key Authentication Parameter",
-		"required": true
-	 }, {
-		"name": "aerodromeICAO",
-		"type": "String",
-		"required": true,
-		"info": "The ICAO code for an aerodrome to see arrivals for e.g. EGLL (Case sensitive)"
-	 }, {
-		"name": "status",
-		"type": "Select",
-		"options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
-		"required": false,
-		"info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
-	 }],
-	 "callbacks": [{
-		"name": "error",
-		"info": "Error"
-	 }, {
-		"name": "success",
-		"info": "Success"
-	 }]
+		"name": "getDeparturesByAerodrome",
+		"description": "Retrieves summary information for flights departing or that are scheduled to depart from the given aerodrome using an extended version of FIXM 3.0, including scheduled and airborne flights.",
+		"args": [{
+			"name": "userKey",
+			"type": "credentials",
+			"info": "User Key Authentication Parameter",
+			"required": true
+		}, {
+			"name": "aerodromeICAO",
+			"type": "String",
+			"required": true,
+			"info": "The ICAO code for an aerodrome to see arrivals for e.g. EGLL (Case sensitive)"
+		}, {
+			"name": "status",
+			"type": "Select",
+			"options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
+			"required": false,
+			"info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
+		}],
+		"callbacks": [{
+			"name": "error",
+			"info": "Error"
+		}, {
+			"name": "success",
+			"info": "Success"
+		}]
 	}, {
-	 "name": "getFlightDataFirLoad",
-	 "description": "Retrieves flights within a given FIR. This GeoJSON API, available via RESTful or streaming interfaces, contains the following European flight data: Estimated FIR entry time (flights scheduled to enter the chosen FIR) Actual FIR entry timestamp (airborne flights currently in the FIR / flights that have already passed through the FIR)and Positional reports (for airborne flights)",
-	 "args": [{
-		"name": "userKey",
-		"type": "credentials",
-		"info": "User Key Authentication Parameter",
-		"required": true
-	 }, {
-		"name": "icaoPrefix",
-		"type": "String",
-		"required": true,
-		"info": "First letter of the ICAO designator e.g. E (Case sensitive)"
-	 }, {
-		"name": "firIcao",
-		"type": "String",
-		"required": true,
-		"info": "ICAO code of the FIR e.g. EGTT (Case sensitive)"
-	 }, {
-		"name": "status",
-		"type": "Select",
-		"options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
-		"required": false,
-		"info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
-	 }],
-	 "callbacks": [{
-		"name": "error",
-		"info": "Error"
-	 }, {
-		"name": "success",
-		"info": "Success"
-	 }]
+		"name": "getFlightDataFirLoad",
+		"description": "Retrieves flights within a given FIR. This GeoJSON API, available via RESTful or streaming interfaces, contains the following European flight data: Estimated FIR entry time (flights scheduled to enter the chosen FIR) Actual FIR entry timestamp (airborne flights currently in the FIR / flights that have already passed through the FIR)and Positional reports (for airborne flights)",
+		"args": [{
+			"name": "userKey",
+			"type": "credentials",
+			"info": "User Key Authentication Parameter",
+			"required": true
+		}, {
+			"name": "icaoPrefix",
+			"type": "String",
+			"required": true,
+			"info": "First letter of the ICAO designator e.g. E (Case sensitive)"
+		}, {
+			"name": "firIcao",
+			"type": "String",
+			"required": true,
+			"info": "ICAO code of the FIR e.g. EGTT (Case sensitive)"
+		}, {
+			"name": "status",
+			"type": "Select",
+			"options": ["airborne", "cancelled", "completed", "planned", "scheduled"],
+			"required": false,
+			"info": "Flight Status (airborne, cancelled, completed, planned or scheduled)"
+		}],
+		"callbacks": [{
+			"name": "error",
+			"info": "Error"
+		}, {
+			"name": "success",
+			"info": "Success"
+		}]
 	}, {
-	 "name": "getFlightDetailByGUFI",
-	 "description": "Retrieves the most complete picture of a single flight using an extended version of FIXM 3.0. Completed flights will remain accessible in the API for 3 hours after the flight has landed.",
-	 "args": [{
-		"name": "userKey",
-		"type": "credentials",
-		"required": true,
-		"info": "User Key Authentication Parameter"
-	 }, {
-		"name": "gufi",
-		"type": "String",
-		"required": true,
-		"info": "GUFI of the flight to look up e.g. `761b728a-9a50-4222-8325-8be4a1574241`"
-	 }],
-	 "callbacks": [{
-		"name": "error",
-		"info": "Error"
-	 }, {
-		"name": "success",
-		"info": "Success"
-	 }]
+		"name": "getFlightDetailByGUFI",
+		"description": "Retrieves the most complete picture of a single flight using an extended version of FIXM 3.0. Completed flights will remain accessible in the API for 3 hours after the flight has landed.",
+		"args": [{
+			"name": "userKey",
+			"type": "credentials",
+			"required": true,
+			"info": "User Key Authentication Parameter"
+		}, {
+			"name": "gufi",
+			"type": "String",
+			"required": true,
+			"info": "GUFI of the flight to look up e.g. `761b728a-9a50-4222-8325-8be4a1574241`"
+		}],
+		"callbacks": [{
+			"name": "error",
+			"info": "Error"
+		}, {
+			"name": "success",
+			"info": "Success"
+		}]
 	}, {
-	 "name": "getFlightDelayByGUFI",
-	 "description": "Retrieves the delay for a single flight. Available in both JSON and XML. Completed flights will remain accessible in the API for 6 hours after the flight has landed. Note that the example GUFI below will not work; you will need a current one from one of the other API calls (e.g. Flights by Airline).",
-	 "args": [{
-		"name": "userKey",
-		"type": "credentials",
-		"required": true,
-		"info": "User Key Authentication Parameter"
-	 }, {
-		"name": "gufi",
-		"type": "String",
-		"required": true,
-		"info": "GUFI of the flight to look up e.g. `761b728a-9a50-4222-8325-8be4a1574241`"
-	 }],
-	 "callbacks": [{
-		"name": "error",
-		"info": "Error"
-	 }, {
-		"name": "success",
-		"info": "Success"
-	 }]
+		"name": "getFlightDelayByGUFI",
+		"description": "Retrieves the delay for a single flight. Available in both JSON and XML. Completed flights will remain accessible in the API for 6 hours after the flight has landed. Note that the example GUFI below will not work; you will need a current one from one of the other API calls (e.g. Flights by Airline).",
+		"args": [{
+			"name": "userKey",
+			"type": "credentials",
+			"required": true,
+			"info": "User Key Authentication Parameter"
+		}, {
+			"name": "gufi",
+			"type": "String",
+			"required": true,
+			"info": "GUFI of the flight to look up e.g. `761b728a-9a50-4222-8325-8be4a1574241`"
+		}],
+		"callbacks": [{
+			"name": "error",
+			"info": "Error"
+		}, {
+			"name": "success",
+			"info": "Success"
+		}]
 	}, {
-	 "name": "getFlightsByTile",
-	 "description": "Retrieves a list of flight summaries for a given tile using an extended version of FIXM 3.0. For more information on tiling see below. The API only returns airborne flights.",
-	 "args": [{
-		"name": "userKey",
-		"type": "credentials",
-		"required": true,
-		"info": "User Key Authentication Parameter"
-	 }, {
-		"name": "xCoordinate",
-		"type": "Number",
-		"required": true,
-		"info": "The x coordinate in the Mercator projection e.g. 3 (Accepts values 0 - 7)"
-	 }, {
-		"name": "yCoordinate",
-		"type": "Number",
-		"required": true,
-		"info": "The y coordinate in the Mercator projection e.g. 2 (Accepts values 0 - 7)"
-	 }],
-	 "callbacks": [{
-		"name": "error",
-		"info": "Error"
-	 }, {
-		"name": "success",
-		"info": "Success"
-	 }]
+		"name": "getFlightsByTile",
+		"description": "Retrieves a list of flight summaries for a given tile using an extended version of FIXM 3.0. For more information on tiling see below. The API only returns airborne flights.",
+		"args": [{
+			"name": "userKey",
+			"type": "credentials",
+			"required": true,
+			"info": "User Key Authentication Parameter"
+		}, {
+			"name": "xCoordinate",
+			"type": "Number",
+			"required": true,
+			"info": "The x coordinate in the Mercator projection e.g. 3 (Accepts values 0 - 7)"
+		}, {
+			"name": "yCoordinate",
+			"type": "Number",
+			"required": true,
+			"info": "The y coordinate in the Mercator projection e.g. 2 (Accepts values 0 - 7)"
+		}],
+		"callbacks": [{
+			"name": "error",
+			"info": "Error"
+		}, {
+			"name": "success",
+			"info": "Success"
+		}]
 	}, {
-	 "name": "flightsByAerodromePair",
-	 "description": "Retrieves a list of flight summaries between a pair of aerodromes using an extended version of FIXM 3.0, including scheduled and airborne flights.",
-	 "args": [{
-		"name": "userKey",
-		"type": "credentials",
-		"required": true,
-		"info": "User Key Authentication Parameter"
-	 }, {
-		"name": "originIcao",
-		"type": "String",
-		"required": true,
-		"info": "The ICAO code for an aerodrome of origin e.g. EGLL (Case sensitive)"
-	 }, {
-		"name": "destinationIcao",
-		"type": "String",
-		"required": true,
-		"info": "The ICAO code for an aerodrome destination e.g. KJFK (Case sensitive)"
-	 }],
-	 "callbacks": [{
-		"name": "error",
-		"info": "Error"
-	 }, {
-		"name": "success",
-		"info": "Success"
-	 }]
+		"name": "flightsByAerodromePair",
+		"description": "Retrieves a list of flight summaries between a pair of aerodromes using an extended version of FIXM 3.0, including scheduled and airborne flights.",
+		"args": [{
+			"name": "userKey",
+			"type": "credentials",
+			"required": true,
+			"info": "User Key Authentication Parameter"
+		}, {
+			"name": "originIcao",
+			"type": "String",
+			"required": true,
+			"info": "The ICAO code for an aerodrome of origin e.g. EGLL (Case sensitive)"
+		}, {
+			"name": "destinationIcao",
+			"type": "String",
+			"required": true,
+			"info": "The ICAO code for an aerodrome destination e.g. KJFK (Case sensitive)"
+		}, {
+			"name": "status",
+			"type": "Select",
+			"options": ["airborne", "cancelled", "completed", "filed", "scheduled"],
+			"required": false,
+			"info": "Flight Status (airborne, cancelled, completed, filed or scheduled)"
+		}],
+		"callbacks": [{
+			"name": "error",
+			"info": "Error"
+		}, {
+			"name": "success",
+			"info": "Success"
+		}]
 	}]
- }
+}
