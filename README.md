@@ -81,4 +81,6 @@ Retrieves a list of flight summaries between a pair of aerodromes using an exten
 | userKey        | credentials| Required: User Key Authentication Parameter
 | originIcao     | String     | Required: The ICAO code for an aerodrome of origin e.g. EGLL (Case sensitive)
 | destinationIcao| String     | Required: The ICAO code for an aerodrome destination e.g. KJFK (Case sensitive)
+| status       	 | Select     | Flight Status (airborne, cancelled, completed, filed or scheduled)
+
 
