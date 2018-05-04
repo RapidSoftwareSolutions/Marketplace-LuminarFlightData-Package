@@ -1,7 +1,7 @@
 [![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/LaminarFlightData/functions?utm_source=RapidAPIGitHub_LaminarFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
 
 
-#LaminarFlightData Package
+## LaminarFlightData Package
 The tool below enables you to explore the Flight Data APIs by building queries and viewing live data
 * Domain: [laminardata.aero](https://snowflakesoftware.com/)
 * Credentials: userKey
